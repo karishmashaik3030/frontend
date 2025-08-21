@@ -7,8 +7,8 @@ function App() {
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>Welcome to My Sample App</h1>
       <p>Counter: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button onClick={() => setCount(count + 1)}>Increment Button</button>
+      <button onClick={() => setCount(count - 1)}>Decrement Button</button>
     </div>
   );
 }
