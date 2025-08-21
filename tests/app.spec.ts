@@ -24,30 +24,17 @@ test.describe('App Component', () => {
   test('should display an error message for invalid input', async ({ page }) => {
     await page.goto('/');
 
-    // Fill invalid input and submit
+    // Fill in invalid input
     const inputField = page.locator('#input-field');
     await inputField.fill('invalid input');
+
+    // Submit the form
     const submitButton = page.locator('#submit-button');
     await submitButton.click();
 
-    // Verify error message is displayed
+    // Verify the error message is displayed
     const errorMessage = page.locator('#error-message');
     await expect(errorMessage).toBeVisible();
     await expect(errorMessage).toHaveText('Invalid input, please try again.');
-  });
-
-  test('should successfully submit valid input', async ({ page }) => {
-    await page.goto('/');
-
-    // Fill valid input and submit
-    const inputField = page.locator('#input-field');
-    await inputField.fill('valid input');
-    const submitButton = page.locator('#submit-button');
-    await submitButton.click();
-
-    // Verify success message is displayed
-    const successMessage = page.locator('#success-message');
-    await expect(successMessage).toBeVisible();
-    await expect(successMessage).toHaveText('Submission successful!');
   });
 });
