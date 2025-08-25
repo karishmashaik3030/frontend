@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <div>
       <h1>Welcome to Home Page</h1>
-      <Button label="Click Me" onClick={() => alert("Button clicked!")} />
+      <Button label="Click Over here to get details" onClick={() => alert("Button clicked!")} />
     </div>
   );
 }
