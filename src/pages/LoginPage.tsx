@@ -6,7 +6,7 @@ function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (username === "admin" && password === "password") {
+    if (username === "adminname" && password === "password") {
       alert("Login successful!");
     } else {
       alert("Invalid credentials");
