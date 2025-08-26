@@ -9,7 +9,7 @@ test.describe('Button Component', () => {
     await expect(button).toHaveText('Click Me'); // Replace 'Click Me' with the expected button text
   });
 
-  test('should trigger the click event when clicked', async ({ page }) => {
+  test('should trigger the click event when clicked trigger when', async ({ page }) => {
     await page.goto('/');
 
     const button = page.locator('data-testid=button');
